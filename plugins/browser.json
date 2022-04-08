@@ -19,6 +19,9 @@
     },
     "cordova-plugin-camera": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "id.msj.ayozakat"
     }
   },
   "dependent_plugins": {}

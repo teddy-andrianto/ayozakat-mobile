@@ -5,7 +5,5 @@ angular.module('phonecatApp', [
   'ngAnimate',
   'ngRoute',
   'ngStorage',
-  'core',
-  'phoneDetail',
-  'phoneList'
+  'ui.bootstrap'
 ]);

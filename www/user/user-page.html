@@ -1,0 +1,56 @@
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+       <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class=" navbar-collapse" id="bs-example-navbar-collapse-1">
+        <center>
+        <ul class="navbar-nav list-inline navmenu-mobile">
+          <li><a ng-click="doHome()"><i class="fa fa-home fa-2x"></i><p>Home</p></a></li>
+          <li><a ng-click="doMuzaki()"><i class="fa fa-plus-square fa-2x"></i><p>Muzaki</p></a></li>
+          <li><a ng-click="doUser()"><i class="fa fa-user fa-2x"></i><p>User</p></a></li>
+        </ul>
+        </center>
+      <!--   <ul class="nav navbar-nav list-inline visible-xs navmenu-mobile">
+            <li><a href="#">docs</a></li>
+            <li><a href="#">help</a></li>
+          </ul> -->
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
+  <div class="container fluid" style="margin-top: 25%;">
+    <div class="row profile">
+		<div class="col-md-12">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic" ng-if="user.foto">
+					<img src="{{ip+'/assets/photo-profile/'+user.foto}}" class="img-responsive" alt="">
+				</div>
+				<div class="profile-userpic" ng-if="!user.foto">
+					<img src="{{ip+'/assets/photo-profile/not-profile.png'}}" class="img-responsive" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						{{user.nama}}
+					</div>
+					<div class="profile-usertitle-job">
+						Unit Penyetoran Zakat
+					</div>
+					<div class="profile-usertitle-username">
+						{{user.username}}@zakat.com
+					</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+				<!-- SIDEBAR BUTTONS -->
+				<div class="profile-userbuttons">
+					<button class="btn btn-success btn-sm"><i class="fa fa-edit"></i> Ubah</button>
+					<button class="btn btn-danger btn-sm" ng-click="doLogout()" >Logout <i class="fas fa-sign-out-alt"></i></button>
+				</div>
+				<!-- END SIDEBAR BUTTONS -->
+				<!-- SIDEBAR MENU -->
+				<!-- END MENU -->
+			</div>
+		</div>
+	</div>
+  </div>

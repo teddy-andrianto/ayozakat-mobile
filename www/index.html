@@ -5,6 +5,7 @@
     <title>Google Phone Gallery</title>
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="lib/bootstrap/dist/css/font-awesome.css" />
+    <link rel="stylesheet" href="lib/ui-boostrap/ui-bootstrap-csp.css" />
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="app.animations.css" />
     <style>
@@ -16,7 +17,7 @@
         user-select: none;
       }
     </style>
-
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 	<script src="cordova.js"></script>
   <script type="text/javascript" src="initOption.js"></script>
     <script src="lib/jquery/dist/jquery.js"></script>
@@ -25,25 +26,30 @@
     <script src="lib/angular-animate/angular-animate.js"></script>
     <script src="lib/angular-resource/angular-resource.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/ui-boostrap/ui-bootstrap.js"></script>
+    <script src="lib/ui-boostrap/ui-bootstrap-tpls.js"></script>
     <script src="app.module.js"></script>
     <script src="app.config.js"></script>
+    <script src="service/accoun-service.js"></script>
     <script src="app.animations.js"></script>
     <script src="core/core.module.js"></script>
     <script src="core/checkmark/checkmark.filter.js"></script>
     <script src="core/phone/phone.module.js"></script>
-    <script src="core/phone/phone.service.js"></script>
-    <script src="phone-list/phone-list.module.js"></script>
+    <!-- <script src="core/phone/phone.service.js"></script> -->
+ <!--    <script src="phone-list/phone-list.module.js"></script>
     <script src="phone-list/phone-list.component.js"></script>
     <script src="phone-detail/phone-detail.module.js"></script>
-    <script src="phone-detail/phone-detail.component.js"></script>
+    <script src="phone-detail/phone-detail.component.js"></script> -->
+      
+      <script type="text/javascript" src="modal/modalController.js"></script>
+      <script type="text/javascript" src="landing/landing-page.js"></script>
+      <script type="text/javascript" src="home/homa-page.js"></script>
+      <script type="text/javascript" src="muzaki/muzaki-page.js"></script>
+      <script type="text/javascript" src="user/user-page.js"></script>
 
       
-      <script type="text/javascript" src="landing/landing-page.js"></script>
-      <script type="text/javascript" src="login/login-page.js"></script>
-      <script type="text/javascript" src="register/register-page.js"></script>
-      <script type="text/javascript" src="product/product-page.js"></script>
   </head>
-  <body>
+  <body style="background-color: #ecf0f5;">
 
     <div class="view-container">
       <div ng-view class="view-frame"></div>

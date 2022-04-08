@@ -1,3 +1,5 @@
+var ip = "https://arthajaya.online/ayozakat";
+
 var metadata =	{
     "datetime" 			: "1997-07-16T19:20:30.45+01:00",
     "deviceId" 			: "teddy.andrianto",

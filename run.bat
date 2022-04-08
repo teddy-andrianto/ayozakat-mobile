@@ -1,0 +1,1 @@
+cordova prepare && cordova build android && native-run android --app D:\Project\Project-belajar\ayozakat-mobile\platforms\android\app\build\outputs\apk\debug\app-debug.apk

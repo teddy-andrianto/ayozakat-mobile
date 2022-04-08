@@ -5,31 +5,22 @@ angular.
   config(['$routeProvider',
     function config($routeProvider) {
       $routeProvider.
-        when('/home', {
-          template: '<phone-list></phone-list>'
-        }).
-        when('/phones/:phoneId', {
-          template: '<phone-detail></phone-detail>'
-        }).
-        when('/register', {
-          templateUrl : 'register/register-page.html',
-          controller: 'registerCtrl'
-        }).
-        when('/login', {
-          templateUrl : 'login/login-page.html',
-          controller: 'loginCtrl'
-        }).
-        when('/landing', {
+        when('/', {
           templateUrl : 'landing/landing-page.html',
           controller:'landingCtrl'
         }).
-        when('/landing-option', {
-          templateUrl : 'landing/landing-option-page.html'
+        when('/home', {
+          templateUrl : 'home/home-page.html',
+          controller: 'homeCtrl'
         }).
-        when('/product', {
-          templateUrl : 'product/product-page.html',
-          controller: 'productCtrl'
+        when('/muzaki', {
+          templateUrl : 'muzaki/muzaki-page.html',
+          controller: 'muzakiCtrl'
         }).
-        otherwise('/landing');
+        when('/user', {
+          templateUrl : 'user/user-page.html',
+          controller: 'userCtrl'
+        })
     }
   ]);
+  

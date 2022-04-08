@@ -1,0 +1,104 @@
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+     <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class=" navbar-collapse" id="bs-example-navbar-collapse-1">
+      <center>
+      <ul class="navbar-nav list-inline navmenu-mobile">
+        <li><a ng-click="doHome()"><i class="fa fa-home fa-2x"></i><p>Home</p></a></li>
+        <li><a ng-click="doMuzaki()"><i class="fa fa-plus-square fa-2x"></i><p>Muzaki</p></a></li>
+        <li><a ng-click="doUser()"><i class="fa fa-user fa-2x"></i><p>User</p></a></li>
+      </ul>
+      </center>
+    <!--   <ul class="nav navbar-nav list-inline visible-xs navmenu-mobile">
+          <li><a href="#">docs</a></li>
+          <li><a href="#">help</a></li>
+        </ul> -->
+    </div><!-- /.navbar-collapse -->
+  </div>
+</nav>
+<div class="container fluid" style="margin-top: 25%;">
+<div class="row">
+  <div class="col-md-12">
+   <!--  <form class="form-signin" ng-submit="doInputMuzaki()">
+        <label for="inputEmail" class="sr-only">Nama Keluarga</label>
+        <input type="text" class="form-control form-control-lg" placeholder="Masukan Nama keluarga" required="" ng-model="kepKel" autofocus="">
+        <br>
+        <label for="inputPassword" class="sr-only">Beras Zakat</label>
+        <input type="number"  class="form-control form-control-lg" placeholder="Masukan Jumlah Beras" required="" ng-model="jumlahBeras">
+        <br>
+        <button class="btn btn-lg btn-success btn-block" type="submit">Simpan</button>
+    </form>   -->
+    <div class="box box-primary">
+      <!-- /.box-header -->
+      <!-- form start -->
+      <form role="form" ng-submit="doInputMuzaki()">
+        <div class="box-body">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Nama Keluarga</label>
+            <input type="text" id="kepala_kel" ng-model="inputData.kepala_kel" class="form-control" placeholder="Masukan Nama Keluarga" maxlength="12" required="">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Beras Zakat</label>
+            <input type="number" id="beras" ng-model="inputData.beras" class="form-control" placeholder="Masukan beras" step="0.01" max="1000" min="0" required="">
+          </div>
+        
+        </div>
+        <!-- /.box-body -->
+
+        <div class="box-footer">
+          <button type="submit" class="btn btn-success btn-block" ng-disabled="countClick > 0">Simpan</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="box">
+      <div class="box-header">
+        <h5 class="box-title">Data Muzaki</h5>
+      </div>
+      
+      <div class="box-body">
+        <table class="table table-condensed">
+          <thead>
+            <tr>
+              <th>Kepala Keluarga</th>
+              <th>Jumlah</th>
+              <th>Beras</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="dm in dataMuzaki">
+              <td>{{dm.kepala_kel}}</td>
+              <td>{{dm.jum_kel}}</td>
+              <td>{{dm.beras}}</td>
+              <td><center><button type="button" class="btn btn-danger btn-xs" ng-click="doDeleteMuzaki(dm.id,dm.kepala_kel)"> <i class="fa fa-times"></i></button></center></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>Jumlah Total</th>
+              <th>{{jumlahMuzaki}}</th>
+              <th>{{jumlahBeras}}</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="box-footer clearfix">
+        
+<!--           <ul class="pagination pagination-sm no-margin">
+            <li><a ng-click="doNext(-1)" ng-disabled="ind <= 1">« back</a></li>
+            <li><a ng-click="doNext(1)" ng-disabled="ind >= maxIndex">next »</a></li>
+          </ul> -->
+          <ul class="pagination pagination-sm no-margin pull-left">
+            <button class="btn btn-sm btn-default" ng-click="doNext(-1)" ng-disabled="ind <= 1">« back</button>
+          </ul>
+          <ul class="pagination pagination-sm no-margin pull-right">
+            <button class="btn btn-sm btn-default pull-right" ng-click="doNext(1)" ng-disabled="ind >= maxIndex">next »</button>
+          </ul>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+</div>

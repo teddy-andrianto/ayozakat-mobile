@@ -1,8 +1,20 @@
-<div class="container">
-    <div class="d_tbl" style="background-color:antiquewhite">
-      <div class="d_tblCel">
-        <img src="{{imgLogo}}">
-        <a href="#!/landing-option">Wong Tani</a>
-      </div>
+<div class="container-fluid" style="margin-top:40%">
+	<div class="row">
+        <center><img src="./img/logo-ayozakat.png" width="80%"></center>
+        <br>
+        <br>
+        <div class="col-md-12" style="margin-left: 10%;margin-right: 10%;">
+                <form class="form-signin" ng-submit="doLogin()">
+                    <label for="inputEmail" class="sr-only">Username</label>
+                    <input type="text" id="inputEmail" class="form-control form-control-lg" placeholder="Masukan Username" required="" ng-model="loginData.username">
+                    <br>
+                    <br>
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" id="inputPassword" class="form-control form-control-lg" placeholder="Masukan Password" required="" ng-model="loginData.password">
+                    <br>
+                    <br>
+                    <button class="btn btn-lg btn-success btn-block" type="submit" ng-disabled="countClick > 0">Login</button>
+                </form>  
+        </div>
     </div>
   </div>

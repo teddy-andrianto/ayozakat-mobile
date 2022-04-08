@@ -7,19 +7,22 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "io.cordova.hellocordova"
+    "cordova-plugin-camera": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "id.msj.ayozakat"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "id.msj.ayozakat"
     },
     "cordova-plugin-geolocation": {
       "GPS_REQUIRED": "true",
-      "PACKAGE_NAME": "io.cordova.hellocordova"
+      "PACKAGE_NAME": "id.msj.ayozakat"
     },
-    "cordova-plugin-device": {
-      "PACKAGE_NAME": "io.cordova.hellocordova"
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "id.msj.ayozakat"
     },
-    "cordova-plugin-camera": {
-      "ANDROID_SUPPORT_V4_VERSION": "27.+",
-      "PACKAGE_NAME": "io.cordova.hellocordova"
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "id.msj.ayozakat"
     }
   },
   "dependent_plugins": {}
