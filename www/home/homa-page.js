@@ -15,11 +15,11 @@ angular.module('phonecatApp').controller('homeCtrl', function($scope,$uibModal,P
     
 
     $scope.doUser = function () {
-      $location.path( "/user" ).replace();;
+      $location.path( "/user" ).replace();
     };
 
     $scope.doHome = function () {
-      $location.path( "/home" ).replace();;
+      $location.path( "/home" ).replace();
     };
 
     $scope.doMuzaki = function () {

@@ -1,6 +1,6 @@
 'use strict';
 angular.module('phonecatApp').controller('landingCtrl', function($scope,$uibModal,Internet,Popup ,accountService, $http, $location, $window,$document,$localStorage,$interval) {
-            $scope.countClick = 0;            
+            $scope.countClick = 0;           
            /*  var onSuccess = function(position) {
                 metadata.datetime = position.timestamp
                 metadata.longitude = position.coords.longitude
@@ -20,14 +20,28 @@ angular.module('phonecatApp').controller('landingCtrl', function($scope,$uibModa
                 $location.path( "/home");
             }
 
-            document.addEventListener("deviceready", function () {
-                 document.addEventListener("backbutton", onBackKeyDown, false);
-                 function onBackKeyDown() {
-                      Popup.confrim("Anda yakin keluar ?").then(function () {
-                        navigator.app.exitApp();
-                      });
-                 } 
-            });
+          /* console.log("cek 1: "+backBtn);
+          if(backBtn==true){
+            document.addEventListener("backbutton", onBackKeyDown, backBtn);
+            function onBackKeyDown() {
+              backBtn=false;
+              console.log("cek 2: "+backBtn);
+              Popup.confrim("Anda yakin keluar ?").then(function () {
+                  navigator.app.exitApp();
+              }).catch(function() {
+                  backBtn=true;
+                  console.log("cek 3: "+backBtn);
+              });;
+            } 
+          }else{
+            document.addEventListener("backbutton", onBackKeyDown, false);
+            function onBackKeyDown() {
+              console.log("cek 4: "+backBtn);
+            } 
+          } */
+          
+          
+            
 
             $scope.doLogin = function(){
               $scope.countClick = 1;

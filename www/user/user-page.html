@@ -20,36 +20,31 @@
   <div class="container fluid" style="margin-top: 25%;">
     <div class="row profile">
 		<div class="col-md-12">
-			<div class="profile-sidebar">
-				<!-- SIDEBAR USERPIC -->
-				<div class="profile-userpic" ng-if="user.foto">
-					<img src="{{ip+'/assets/photo-profile/'+user.foto}}" class="img-responsive" alt="">
+			<div class="box box-primary">
+				<div class="box-body">
+					<a ng-click="doUpdateImg()">
+						<img ng-show="user.foto" class="profile-user-img img-responsive img-circle" src="{{ip+'/assets/photo-profile/'+user.foto}}" alt="User profile picture" width="100">
+						<img ng-show="!user.foto" class="profile-user-img img-responsive img-circle" src="{{ip+'/assets/photo-profile/not-profile.png'}}" alt="User profile picture" width="100">
+					</a>
+					<h3 class="profile-username text-center">{{user.nama}}</h3>
+					<p class="text-muted text-center">Unit Penyetoran Zakat</p>
+					<ul class="list-group list-group-unbordered">
+						<li class="list-group-item">
+							<b>Username</b>
+							<a class="pull-right" ng-click="doUpdateUsername()">{{user.username}} <i class="fa fa-pen"></i></a>
+						</li>
+						<li class="list-group-item">
+							<b>Password</b>
+							<a class="pull-right" ng-click="doUpdatePassword()">&bull;&bull;&bull;&bull;&bull;&bull; <i class="fa fa-pen"></i></a>
+						</li>
+						<li class="list-group-item">
+							<b>Alamat</b>
+							<span class="pull-right">{{user.alamat}}</a>
+						</li>
+					</ul>
+					<a class="btn btn-danger btn-block" ng-click="doLogout()"><b>Logout <i class="fas fa-sign-out-alt"></i></b></a>
 				</div>
-				<div class="profile-userpic" ng-if="!user.foto">
-					<img src="{{ip+'/assets/photo-profile/not-profile.png'}}" class="img-responsive" alt="">
-				</div>
-				<!-- END SIDEBAR USERPIC -->
-				<!-- SIDEBAR USER TITLE -->
-				<div class="profile-usertitle">
-					<div class="profile-usertitle-name">
-						{{user.nama}}
-					</div>
-					<div class="profile-usertitle-job">
-						Unit Penyetoran Zakat
-					</div>
-					<div class="profile-usertitle-username">
-						{{user.username}}@zakat.com
-					</div>
-				</div>
-				<!-- END SIDEBAR USER TITLE -->
-				<!-- SIDEBAR BUTTONS -->
-				<div class="profile-userbuttons">
-					<button class="btn btn-success btn-sm"><i class="fa fa-edit"></i> Ubah</button>
-					<button class="btn btn-danger btn-sm" ng-click="doLogout()" >Logout <i class="fas fa-sign-out-alt"></i></button>
-				</div>
-				<!-- END SIDEBAR BUTTONS -->
-				<!-- SIDEBAR MENU -->
-				<!-- END MENU -->
+				
 			</div>
 		</div>
 	</div>

@@ -19,11 +19,9 @@ angular.module('phonecatApp').controller('AlertCtrl', function ($uibModalInstanc
       $uibModalInstance.close();
     };
   });
-
-
+  
 angular.module('phonecatApp').service('Popup', function($uibModal){
     this.alert = function (data) {
-        console.log("cek 1: "+data);
         var modalInstance = $uibModal.open({
         animation: true,
         ariaLabelledBy: 'modal-title',

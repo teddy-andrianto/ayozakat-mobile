@@ -5,5 +5,6 @@ angular.module('phonecatApp', [
   'ngAnimate',
   'ngRoute',
   'ngStorage',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'imageupload'
 ]);
