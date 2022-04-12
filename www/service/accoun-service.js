@@ -68,13 +68,13 @@ angular.module('phonecatApp').service('accountService', function ($http,$localSt
 		return $http.post(ip+"/index.php/api/updatePassword",body,options);
 	}
 	this.updatePhotoProfile = function(request){
-		let body = `imageUrl=${request.imageUrl}`;
+		let parameter = JSON.stringify(request);
 		let options = {
 			headers:{
-			'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8',
+			'Content-Type':'application/json; charset=UTF-8',
 			'AUTHENTICATION-KEY': $localStorage.token}
 		};
-		return $http.post(ip+"/index.php/api/updatePhotoProfile",body,options);
+		return $http.post(ip+"/index.php/api/updatePhotoProfile",parameter,options);
 	}
 });
 

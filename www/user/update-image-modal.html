@@ -1,5 +1,7 @@
 <div class="modal-body" id="modal-body">
     <form class="form-signin" enctype="multipart/form-data">
+        <img ng-show="image2.resized.dataURL" class="profile-user-img img-responsive img-circle" ng-src="{{image2.resized.dataURL}}" >
+        <br>
         <input id="inputImage2" class="form-control form-control-lg"
         type="file" 
         accept="image/*" 

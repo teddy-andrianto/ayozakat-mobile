@@ -58,7 +58,7 @@ angular.module('phonecatApp').controller('userCtrl', function($scope, $uibModal,
         size: 'xs'
       });
       modalInstance.result.then(function () {
-        
+        getDataAmilin();
       });
     }
 });
@@ -157,7 +157,7 @@ angular.module('phonecatApp').controller('UpdateImageCtrl', function ($uibModalI
   //var pc = this;
   $scope.uploadFiles = function(data){
     let request = {
-      "dateUrl" : data.dataURL
+      "imageUrl" : data.dataURL
     }
     accountService.updatePhotoProfile(request)
     .then(function(response){
@@ -170,7 +170,8 @@ angular.module('phonecatApp').controller('UpdateImageCtrl', function ($uibModalI
         $location.path( "/" );
         Popup.alert("Sesi telah habis silahkan login kembali");
       }
-    }).catch(function() {
+    }).catch(function(response) {
+      console.log(response);
       Internet.checkConection();
     })
   }
